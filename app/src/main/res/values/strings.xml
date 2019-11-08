@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">ProjectLogin</string>
+
+    <!-- Buttons -->
+    <string name="btnLogin">Login</string>
+    <string name="btnRegister">Register</string>
+    <string name="btnCancelRegister">Cancel</string>
+    <string name="btnConfirmRegister">Confirm</string>
+    <string name="btnCancelLogin">Cancel</string>
+    <string name="btnConfirmLogin">Confirm</string>
+
+    <!-- Image View -->
+    <string name="picUser">Picture User</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <!-- EditText -->
+    <string name="editTxtPassword">Password</string>
+    <string name="editTxtLogin">Login</string>
+    <string name="editTxtName">Name</string>
+    <string name="editTxtCpf">CPF</string>
+
+
+</resources>
