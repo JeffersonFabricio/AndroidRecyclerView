@@ -19,6 +19,11 @@
     <string name="editTxtLogin">Login</string>
     <string name="editTxtName">Name</string>
     <string name="editTxtCpf">CPF</string>
+    <string name="txtViewHelloName">Hello, </string>
+
+    <!-- Text -->
+    <string name="txtLogin">Login</string>
+    <string name="txtPassword">Password</string>
 
 
 </resources>
