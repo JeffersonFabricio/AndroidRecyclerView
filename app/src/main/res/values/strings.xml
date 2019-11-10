@@ -8,6 +8,7 @@
     <string name="btnConfirmRegister">Confirm</string>
     <string name="btnCancelLogin">Cancel</string>
     <string name="btnConfirmLogin">Confirm</string>
+    <string name="description_btn_recycleview">Delete</string>
 
     <!-- Image View -->
     <string name="picUser">Picture User</string>

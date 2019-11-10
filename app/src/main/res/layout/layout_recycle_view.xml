@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/editTxtLayoutRecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/app_name"
+        android:layout_weight="1"
+        android:text="@string/app_name" />
+
+    <ImageButton
+        android:id="@+id/imgBtnLayoutRecycleView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:contentDescription="@string/description_btn_recycleview"
+        app:srcCompat="@drawable/ic_delete_black_24dp" />
+
+</LinearLayout>
