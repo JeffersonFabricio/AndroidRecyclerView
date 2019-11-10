@@ -22,6 +22,9 @@ class MyAdapter(private val notes: MutableList<Note>): RecyclerView.Adapter<MyVi
             notifyItemRemoved(position)
             notifyItemRangeChanged(position, notes.size)
         }
+        holder.edit.setOnClickListener{
+            notifyItemChanged(position)
+        }
     }
 
     fun addNote(note:Note){
