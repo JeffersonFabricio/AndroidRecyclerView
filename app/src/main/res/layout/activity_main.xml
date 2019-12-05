@@ -7,26 +7,47 @@
     android:background="@color/colorPrimaryDark"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imgVMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/user"
-        android:contentDescription="@string/picUser" />
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/imgVMain"
+            android:layout_width="match_parent"
+            android:layout_height="437dp"
+            android:contentDescription="@string/picUser"
+            android:src="@drawable/user"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.164"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            android:gravity="bottom|center"
+            android:text="@string/app_name"
+            android:textColor="@color/colorPrimary"
+            android:textSize="44sp" />
+
+    </FrameLayout>
 
     <Button
         android:id="@+id/btnMainRegister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="450dp"
         android:text="@string/btnRegister"
-        app:layout_constraintEnd_toEndOf="@+id/imgVMain"
-        app:layout_constraintStart_toStartOf="@+id/imgVMain"
-        app:layout_constraintTop_toBottomOf="@+id/btnMainLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout"
         tools:ignore="MissingConstraints"
         tools:text="@string/btnRegister" />
 
@@ -34,11 +55,13 @@
         android:id="@+id/btnMainLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="450dp"
         android:text="@string/btnLogin"
-        app:layout_constraintEnd_toEndOf="@+id/imgVMain"
-        app:layout_constraintStart_toStartOf="@+id/imgVMain"
-        app:layout_constraintTop_toBottomOf="@+id/imgVMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout"
         tools:ignore="MissingConstraints"
         tools:text="@string/btnLogin" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

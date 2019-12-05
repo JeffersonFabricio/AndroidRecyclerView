@@ -20,9 +20,17 @@ class ListActivity : AppCompatActivity() {
         adapter = MyAdapter(mutableListOf())
         recycleView.adapter = adapter
 
+        val listNotes = ArrayList<Note>()
+        listNotes.add(Note("Jeffers"))
+        listNotes.add(Note("Haldny"))
+        listNotes.add(Note("Fulano"))
+        listNotes.add(Note("Ciclano"))
+
         floatingActionBtn.setOnClickListener{
-            val note = Note("Jeffers")
-            adapter.addNote(note)
+            var cont: Int
+            cont = 0
+            adapter.addNote(listNotes[cont])
+            cont =+ 1
         }
 
     }
