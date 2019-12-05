@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ProjectLogin</string>
+    <string name="app_name">Project Android Advanced</string>
 
     <!-- Buttons -->
     <string name="btnLogin">Login</string>
@@ -18,7 +18,7 @@
     <!-- EditText -->
     <string name="editTxtPassword">Password</string>
     <string name="editTxtLogin">Login</string>
-    <string name="editTxtName">Name</string>
+    <string name="editTxtEmail">E-mail</string>
     <string name="editTxtCpf">CPF</string>
     <string name="txtViewHelloName">Hello, </string>
 

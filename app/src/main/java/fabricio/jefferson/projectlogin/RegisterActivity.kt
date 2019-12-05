@@ -2,6 +2,7 @@ package fabricio.jefferson.projectlogin
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -19,10 +20,9 @@ class RegisterActivity : AppCompatActivity() {
 
         btnConfirmRegister.setOnClickListener {
             val intent = Intent(this, ListActivity::class.java)
-            intent.putExtra("name", editTxtNameRegister.text.toString())
             intent.putExtra("cpf", editTxtCpfRegister.text.toString())
             intent.putExtra("login", editTxtLoginRegister.text.toString())
-            if (validatePassword())
+            if (validatePassword() && validateEmail())
                 startActivity(intent)
         }
     }
@@ -34,6 +34,20 @@ class RegisterActivity : AppCompatActivity() {
             intent.putExtra("password", password)
         else {
             Toast.makeText(this, "Password invalid! start with the first letter uppercase.", Toast.LENGTH_LONG).show()
+            return false
+        }
+        return true
+    }
+
+    private fun validateEmail(): Boolean {
+
+        val email = editTxtEmailRegister.text.toString()
+        val pattern = Patterns.EMAIL_ADDRESS
+        if (email.matches(pattern.toRegex())){
+            intent.putExtra("email", email)
+        }
+        else {
+            Toast.makeText(this, "E-mail invalid!", Toast.LENGTH_LONG).show()
             return false
         }
         return true

@@ -8,31 +8,29 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTxtNameRegister"
+        android:id="@+id/editTxtEmailRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/editTxtName"
+        android:inputType="text"
+        android:text="@string/editTxtEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/editTxtName" />
+        tools:text="@string/editTxtEmail"/>
 
     <EditText
         android:id="@+id/editTxtCpfRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:digits="0123456789"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="@string/editTxtCpf"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTxtNameRegister"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtEmailRegister"
         tools:text="@string/editTxtCpf" />
 
     <EditText
@@ -66,7 +64,7 @@
         android:id="@+id/btnCancelRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="32dp"
         android:text="@string/btnCancelRegister"
         app:layout_constraintEnd_toStartOf="@+id/editTxtPasswordRegister"
@@ -79,7 +77,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="48dp"
         android:text="@string/btnConfirmRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editTxtPasswordRegister"
