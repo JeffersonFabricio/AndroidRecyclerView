@@ -7,6 +7,8 @@ import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import fabricio.jefferson.projectlogin.R
+import fabricio.jefferson.projectlogin.database.MyDatabase
+import fabricio.jefferson.projectlogin.model.User
 
 import kotlinx.android.synthetic.main.activity_register.*
 
@@ -17,6 +19,8 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var email: String
     private lateinit var login: String
     private lateinit var password: String
+
+    var dbHelper = MyDatabase(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +35,8 @@ class RegisterActivity : AppCompatActivity() {
             if (initViews()){
                 if (validatePassword() && validateEmail()){
                     inputValues()
+                    var user = User(0, name, cpf, email, login, password)
+                    dbHelper!!.addUser(user)
                     startActivity(intent)
                 }
             }
@@ -55,6 +61,7 @@ class RegisterActivity : AppCompatActivity() {
             Toast.makeText(this, "Enter all fields", Toast.LENGTH_LONG).show()
             return false
         }
+
         return true
     }
 

@@ -24,10 +24,6 @@ class LoginActivity : AppCompatActivity() {
 
         btnConfirmLogin.setOnClickListener {
             val intent = Intent(this, ListActivity::class.java)
-            intent.putExtra("login", editTxtLoginLogin.text.toString())
-            if (validatePassword()){
-                startActivity(intent)
-            }
             if (initViews()){
                 if (validatePassword()){
                     inputValues()
