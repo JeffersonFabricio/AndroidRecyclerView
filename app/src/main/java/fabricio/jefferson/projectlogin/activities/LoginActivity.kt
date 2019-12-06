@@ -14,6 +14,8 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var login: String
     private lateinit var password: String
 
+    var dbHelper = MyDatabase(this)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -27,7 +29,10 @@ class LoginActivity : AppCompatActivity() {
             if (initViews()){
                 if (validatePassword()){
                     inputValues()
-                    startActivity(intent)
+                    if (dbHelper.checkUser(login, password))
+                        startActivity(intent)
+                    else
+                        Toast.makeText(this, "Login or Password invalid!", Toast.LENGTH_LONG).show()
                 }
             }
 
