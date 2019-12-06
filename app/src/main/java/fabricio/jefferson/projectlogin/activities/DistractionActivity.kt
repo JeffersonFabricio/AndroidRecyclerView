@@ -1,7 +1,8 @@
-package fabricio.jefferson.projectlogin
+package fabricio.jefferson.projectlogin.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import fabricio.jefferson.projectlogin.R
 
 class DistractionActivity : AppCompatActivity() {
 

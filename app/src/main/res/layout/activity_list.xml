@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListActivity">
+    tools:context=".activities.ListActivity">
 
     <TextView
         android:id="@+id/txtViewHelloName"
@@ -12,11 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        android:text="@string/txtViewHelloName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/txtViewHelloName" />
+        tools:text="@string/hint_name" />
 
     <TextView
         android:id="@+id/txtNameParameter"

@@ -1,14 +1,20 @@
-package fabricio.jefferson.projectlogin
+package fabricio.jefferson.projectlogin.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import fabricio.jefferson.projectlogin.R
+import fabricio.jefferson.projectlogin.model.Note
 
 class MyAdapter(private val notes: MutableList<Note>): RecyclerView.Adapter<MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.layout_recycle_view, parent,false)
+            LayoutInflater.from(parent.context).inflate(
+                R.layout.layout_recycle_view,
+                parent,
+                false
+            )
         )
     }
 
@@ -30,7 +36,7 @@ class MyAdapter(private val notes: MutableList<Note>): RecyclerView.Adapter<MyVi
         }
     }
 
-    fun addNote(note:Note){
+    fun addNote(note: Note){
         notes.add(note)
         notifyItemInserted(itemCount)
     }

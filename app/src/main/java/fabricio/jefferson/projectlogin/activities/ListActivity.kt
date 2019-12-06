@@ -1,14 +1,16 @@
-package fabricio.jefferson.projectlogin
+package fabricio.jefferson.projectlogin.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import fabricio.jefferson.projectlogin.adapters.MyAdapter
+import fabricio.jefferson.projectlogin.model.Note
+import fabricio.jefferson.projectlogin.R
 import kotlinx.android.synthetic.main.activity_list.*
-import kotlinx.android.synthetic.main.layout_recycle_view.*
 
 class ListActivity : AppCompatActivity() {
 
-    private lateinit var adapter:MyAdapter
+    private lateinit var adapter: MyAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,7 +19,8 @@ class ListActivity : AppCompatActivity() {
         txtNameParameter.text = intent?.getStringExtra("login")
         recycleView.layoutManager = LinearLayoutManager(this)
 
-        adapter = MyAdapter(mutableListOf())
+        adapter =
+            MyAdapter(mutableListOf())
         recycleView.adapter = adapter
 
         val listNotes = ArrayList<Note>()

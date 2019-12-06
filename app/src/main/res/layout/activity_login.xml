@@ -4,51 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
-    tools:context=".MainActivity">
+    android:background="@color/colorBackground"
+    tools:context=".activities.LoginActivity">
 
-    <EditText
-        android:id="@+id/editTxtLoginLogin"
+    <TextView
+        android:id="@+id/txtViewLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/txtLogin"
-        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/hint_login"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTxtPasswordLogin"
+        android:id="@+id/editTxtLoginLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewLogin" />
+
+    <TextView
+        android:id="@+id/txtViewPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:text="@string/txtPassword"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/hint_password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTxtLoginLogin" />
 
-    <Button
-        android:id="@+id/btnCancelLogin"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editTxtPasswordLogin"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/btnCancelLogin"
-        app:layout_constraintStart_toStartOf="@+id/editTxtPasswordLogin"
-        app:layout_constraintTop_toBottomOf="@+id/editTxtPasswordLogin"
-        tools:text="Cancel" />
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewPassword" />
 
-    <Button
-        android:id="@+id/btnConfirmLogin"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/btnConfirmLogin"
-        app:layout_constraintStart_toEndOf="@+id/editTxtPasswordLogin"
-        app:layout_constraintTop_toBottomOf="@+id/editTxtPasswordLogin" />
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtPasswordLogin">
+
+        <Button
+            android:id="@+id/btnCancelLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="@string/hint_cancel"
+            app:layout_constraintStart_toStartOf="@+id/editTxtPasswordLogin"
+            app:layout_constraintTop_toBottomOf="@+id/editTxtPasswordLogin"
+            tools:text="Cancel" />
+
+        <Button
+            android:id="@+id/btnConfirmLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="2"
+            android:text="@string/hint_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTxtPasswordLogin" />
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,11 @@
-package fabricio.jefferson.projectlogin
+package fabricio.jefferson.projectlogin.activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import fabricio.jefferson.projectlogin.database.MyDatabase
+import fabricio.jefferson.projectlogin.R
 
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -13,6 +15,8 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        var dbHelper = MyDatabase(this)
+
         btnCancelLogin.setOnClickListener {
             finish()
         }
@@ -20,8 +24,10 @@ class LoginActivity : AppCompatActivity() {
         btnConfirmLogin.setOnClickListener {
             val intent = Intent(this, ListActivity::class.java)
             intent.putExtra("login", editTxtLoginLogin.text.toString())
-            if (validatePassword())
+            if (validatePassword()){
                 startActivity(intent)
+            }
+
         }
     }
 
