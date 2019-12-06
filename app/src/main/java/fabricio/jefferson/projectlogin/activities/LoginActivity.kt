@@ -11,11 +11,12 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
 
+    private lateinit var login: String
+    private lateinit var password: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
-        var dbHelper = MyDatabase(this)
 
         btnCancelLogin.setOnClickListener {
             finish()
@@ -27,12 +28,37 @@ class LoginActivity : AppCompatActivity() {
             if (validatePassword()){
                 startActivity(intent)
             }
+            if (initViews()){
+                if (validatePassword()){
+                    inputValues()
+                    startActivity(intent)
+                }
+            }
 
         }
     }
 
+    private fun initViews() : Boolean{
+
+        login = editTxtLoginLogin.text.toString()
+        password = editTxtPasswordLogin.text.toString()
+
+        if (
+            login.isEmpty() || login.isNullOrBlank()||
+            password.isEmpty() || password.isNullOrBlank()
+        ){
+            Toast.makeText(this, "Enter all fields", Toast.LENGTH_LONG).show()
+            return false
+        }
+        return true
+    }
+
+    private fun inputValues(){
+        intent.putExtra("login", editTxtLoginLogin.text.toString())
+        intent.putExtra("password", editTxtPasswordLogin.text.toString())
+    }
+
     private fun validatePassword(): Boolean{
-        val password = editTxtPasswordLogin.text.toString()
 
         if (password[0].isUpperCase())
             intent.putExtra("password", password)
