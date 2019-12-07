@@ -14,11 +14,11 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var login: String
     private lateinit var password: String
 
-    var dbHelper = MyDatabase(this)
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        var dbHelper = MyDatabase(this)
 
         btnCancelLogin.setOnClickListener {
             finish()
@@ -35,11 +35,10 @@ class LoginActivity : AppCompatActivity() {
                         Toast.makeText(this, "Login or Password invalid!", Toast.LENGTH_LONG).show()
                 }
             }
-
         }
     }
 
-    private fun initViews() : Boolean{
+    private fun initViews() : Boolean {
 
         login = editTxtLoginLogin.text.toString()
         password = editTxtPasswordLogin.text.toString()
@@ -51,6 +50,7 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this, "Enter all fields", Toast.LENGTH_LONG).show()
             return false
         }
+
         return true
     }
 
@@ -62,12 +62,11 @@ class LoginActivity : AppCompatActivity() {
     private fun validatePassword(): Boolean{
 
         if (password[0].isUpperCase())
-            intent.putExtra("password", password)
+            return true
         else {
             Toast.makeText(this, "Password invalid! start with the first letter uppercase.", Toast.LENGTH_LONG).show()
             return false
         }
-        return true
     }
 
 }

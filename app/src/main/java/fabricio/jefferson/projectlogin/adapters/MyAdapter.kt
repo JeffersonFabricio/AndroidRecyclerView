@@ -24,14 +24,14 @@ class MyAdapter(private val notes: MutableList<Note>): RecyclerView.Adapter<MyVi
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val note = notes[position]
-        holder.title.text = note.title
+        holder.title.text = note.atividade
         holder.delete.setOnClickListener {
             notes.removeAt(position)
             notifyItemRemoved(position)
             notifyItemRangeChanged(position, notes.size)
         }
         holder.edit.setOnClickListener{
-            holder.title.text = note.title
+            holder.title.text = note.atividade
             notifyItemChanged(position)
         }
     }

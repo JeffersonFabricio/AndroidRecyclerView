@@ -24,17 +24,17 @@ class ListActivity : AppCompatActivity() {
         recycleView.adapter = adapter
 
         val listNotes = ArrayList<Note>()
-        listNotes.add(Note("Jeffers"))
-        listNotes.add(Note("Haldny"))
-        listNotes.add(Note("Fulano"))
-        listNotes.add(Note("Ciclano"))
+        listNotes.add(Note("Jeffers",""))
+        listNotes.add(Note("Haldny",""))
+        listNotes.add(Note("Fulano",""))
+        listNotes.add(Note("Ciclano",""))
 
-        floatingActionBtn.setOnClickListener{
+        /*floatingActionBtn.setOnClickListener{
             var cont: Int
             cont = 0
             adapter.addNote(listNotes[cont])
             cont =+ 1
-        }
+        }*/
 
     }
 }

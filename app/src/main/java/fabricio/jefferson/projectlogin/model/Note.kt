@@ -1,4 +1,6 @@
 package fabricio.jefferson.projectlogin.model
 
-class Note (val title: String) {
-}
+class Note (
+    val atividade: String,
+    val dia: String
+    )
