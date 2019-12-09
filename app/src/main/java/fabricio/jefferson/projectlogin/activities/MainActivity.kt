@@ -12,6 +12,7 @@ import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.constraintlayout.widget.Constraints
 import androidx.core.app.NotificationCompat
 import fabricio.jefferson.projectlogin.R
 import kotlinx.android.synthetic.main.activity_main.*
