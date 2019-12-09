@@ -46,6 +46,10 @@ class MainActivity : AppCompatActivity() {
 
         notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
+        val intent = Intent(context, LoginActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+
         val pedingIntent = PendingIntent.getActivity(context, 1234,
             intent, PendingIntent.FLAG_UPDATE_CURRENT)
 
